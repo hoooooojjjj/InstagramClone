@@ -1,6 +1,7 @@
 // 실습1
 const storyModal = document.querySelector(".story-modal");
 const storyElements = document.querySelectorAll(".story-element");
+const xButton = document.querySelector(".xButton");
 
 storyElements.forEach((e) => {
   e.addEventListener("click", () => {
@@ -8,7 +9,7 @@ storyElements.forEach((e) => {
   });
 });
 
-storyModal.addEventListener("click", () => {
+xButton.addEventListener("click", () => {
   storyModal.style.display = "none";
 });
 

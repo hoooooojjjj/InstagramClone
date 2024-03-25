@@ -182,20 +182,53 @@
   cursor: pointer; /* 마우스 손가락모양 */
   background-color: #1a1a1a; /* 0.8은 투명도*/
 }
-
+.story-modal .xButton {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+}
 .logo_black {
   position: absolute;
   top: 10px;
   left: 15px;
   height: 50px;
 }
-
 #story-image {
   border-radius: 20px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+  width: 30vw;
+  height: 95vh;
+}
+#story_real {
+  position: fixed;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+  width: 30vw;
+  height: 10vh;
+  display: flex;
+}
+#story_text {
+  z-index: 2;
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 30px;
+  padding-left: 20px;
+  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  color: white;
+}
+
+.story_icon {
+  width: 45px;
+  height: 40px;
 }
 
 #profile-modal {
