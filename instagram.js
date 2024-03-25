@@ -87,10 +87,8 @@ const deleteComment = (event) => {
   const li = event.target.parentNode.parentNode; // 이벤트가 일어난 대상의 부모
   li.remove(); // remove() 함수 -> 요소를 지울 수 있음.
   commentsList = commentsList.filter(function (comment) {
-    console.log(comment);
     return comment.id !== parseInt(li.id);
   }); // 클릭한 버튼의 li의 id를 가진 배열의 요소를 지움.
-  console.log(li);
   savedToDos();
 };
 
@@ -113,4 +111,3 @@ if (savedComment !== null) {
   // => 이러면 새로고침할 때마다 toDos 배열은 리셋되지만 로컬에는 남아있기 때문에 그걸 다시 toDos 배열에 넣어서
   // 가져올 수 있다.
 }
-console.log(commentsList);
