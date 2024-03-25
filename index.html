@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./instagram.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/emojimart/css/emojimart.css"
+      href="https://unpkg.com/emoji-button@5.0.0/dist/emoji-button.css"
     />
     <title>Liongram</title>
   </head>
@@ -110,14 +110,14 @@
             <div class="comment-container">
               <img
                 class="smile iconHover"
-                id="emojiButton"
+                id="emoji_btn"
                 src="./images/smile.png"
               />
               <div id="emojiContainer" style="display: none"></div>
               <input
                 type="text"
                 class="comment"
-                id="emojiInput"
+                id="message"
                 placeholder="댓글 달기..."
               />
               <button class="comment-button" type="submit">게시</button>
@@ -130,13 +130,12 @@
       </div>
       <footer>
         <p class="footer-message">Ⓒ2023 LIONGRAM</p>
-        <input type="text" id="emojiInput" placeholder="이모지 선택" />
       </footer>
     </main>
     <script src="./instagram.js"></script>
     <script src="./header.js"></script>
     <script src="./animation.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emojimart"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
     <script src="./emojiPicker.js"></script>
   </body>
 </html>
