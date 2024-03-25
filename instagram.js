@@ -55,18 +55,20 @@ const commentContainer = document.querySelector(".written-comments-container");
 const commentInput = document.querySelector(".comment");
 
 // 댓글을 만드는 로직
-const commentsList = [];
+let commentsList = [];
 let commentId = 0;
 const ul = document.querySelector(".comment-wrapper");
 
 const submitComents = (commentText, deleteComment) => {
   const li = document.createElement("li");
   li.innerText = commentText;
+  li.style.fontSize = "20px";
+  li.style.listStyle = "none";
   const span = document.createElement("span");
   const img = document.createElement("img");
   img.id = commentId;
-  img.class = "comment-delete-icon";
-  img.onclick = deleteComment(commentId);
+  img.className = "comment-delete-icon";
+  img.onclick = deleteComment;
   img.src = "./images/close.png";
   img.alt = "comment";
   span.appendChild(img);
@@ -79,7 +81,6 @@ commentsCreateForm.addEventListener("submit", (e) => {
   const commentText = commentInput.value;
   if (!commentText) return;
   commentsList.push(commentText);
-
   commentId = commentsList.length;
   submitComents(commentText, deleteComment);
   commentInput.value = "";
@@ -87,24 +88,13 @@ commentsCreateForm.addEventListener("submit", (e) => {
 
 // 실습 5
 
-const deleteComment = (id) => {
-  // TODO1. commentsList 의 id번째 원소를 하나 삭제합니다.
-  commentsList.splice(id, 1);
-
-  // TODO2. 새로운 commentsList에 map 함수를 호출하여
-  // 댓글 HTML 요소들로 이루어진 배열을 만듭니다.
-  // join 함수를 이용해 배열 원소들을 하나의 스트링으로 만들어
-  // commentContainer의 innerHTML에 저장합니다.
-
-  commentContainer.innerHTML = commentsList
-    .map(
-      (comment, index) => `
-  <div class="comment-wrapper">
-    <span class="comment">${comment}</span>
-    <img id="${index}" class="comment-delete-icon" onclick="deleteComment(${index})" src="./images/close.png" alt="comment" />
-  </div>`
-    )
-    .join("");
+const deleteComment = (event) => {
+  console.log(event);
+  const li = event.target.parentNode.parentNode; // 이벤트가 일어난 대상의 부모
+  li.remove(); // remove() 함수 -> 요소를 지울 수 있음.
+  commentsList = commentsList.filter(function () {
+    return commentId !== parseInt(li.id);
+  }); // 클릭한 버튼의 li의 id를 가진 배열의 요소를 지움.
 };
 
 // 실습6
