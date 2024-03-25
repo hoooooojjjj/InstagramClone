@@ -57,6 +57,22 @@ const commentInput = document.querySelector(".comment");
 // 댓글을 만드는 로직
 const commentsList = [];
 let commentId = 0;
+const ul = document.querySelector(".comment-wrapper");
+
+const submitComents = (commentText, deleteComment) => {
+  const li = document.createElement("li");
+  li.innerText = commentText;
+  const span = document.createElement("span");
+  const img = document.createElement("img");
+  img.id = commentId;
+  img.class = "comment-delete-icon";
+  img.onclick = deleteComment(commentId);
+  img.src = "./images/close.png";
+  img.alt = "comment";
+  span.appendChild(img);
+  li.appendChild(span);
+  ul.appendChild(li);
+};
 
 commentsCreateForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -65,19 +81,7 @@ commentsCreateForm.addEventListener("submit", (e) => {
   commentsList.push(commentText);
 
   commentId = commentsList.length;
-  const commentNode = `
-    <div class="comment-wrapper">
-      <span class="comment">${commentText}</span>
-      <img
-        id="${commentId}" 
-        class="comment-delete-icon" 
-        onclick="deleteComment(${commentId})" 
-        src="./images/close.png" 
-        alt="comment" 
-      />
-    </div>
-  `;
-  commentContainer.innerHTML = commentContainer.innerHTML + commentNode;
+  submitComents(commentText, deleteComment);
   commentInput.value = "";
 });
 
