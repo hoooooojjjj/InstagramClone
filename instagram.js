@@ -28,7 +28,7 @@ profile_container.addEventListener("mouseout", () => {
 
 // 실습 3
 const likeCount = document.getElementById("like-count");
-likeCountNum = likeCount.innerText;
+let likeCountNum = likeCount.innerText;
 const blackHeart = document.getElementById("black-heart");
 const redHeart = document.getElementById("red-heart");
 
