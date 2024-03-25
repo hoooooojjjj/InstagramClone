@@ -154,6 +154,10 @@
   right: 20px;
   height: 45px;
 }
+
+.comment-button:hover {
+  opacity: 100%;
+}
 /* comment container 부분 끝*/
 
 /* 피드 부분 끝*/
@@ -176,7 +180,14 @@
   height: 100%;
   overflow: auto; /* 스크롤 허용 auto */
   cursor: pointer; /* 마우스 손가락모양 */
-  background-color: rgba(0, 0, 0, 0.8); /* 0.8은 투명도*/
+  background-color: #1a1a1a; /* 0.8은 투명도*/
+}
+
+.logo_black {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 50px;
 }
 
 #story-image {
@@ -216,4 +227,8 @@
   margin-left: 10px;
   cursor: pointer;
   font-weight: bold;
+}
+
+.iconHover:hover {
+  opacity: 50%;
 }
