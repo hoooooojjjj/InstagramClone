@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./instagram.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/emojimart/css/emojimart.css"
+    />
     <title>Liongram</title>
   </head>
   <body>
@@ -84,7 +88,6 @@
                 id="like_modal_pofile"
                 src="./images/like_modal_profile.png"
               />
-              <span id="like_modal_xbutton">x</span>
               <div>
                 <strong>junha0465</strong>님이 회원님의 게시물을 좋아합니다.
                 <br /><span style="color: gray">방금전</span>
@@ -105,8 +108,18 @@
           </div>
           <form class="comments-create-form">
             <div class="comment-container">
-              <img class="smile iconHover" src="./images/smile.png" />
-              <input class="comment" placeholder="댓글 달기..." />
+              <img
+                class="smile iconHover"
+                id="emojiButton"
+                src="./images/smile.png"
+              />
+              <div id="emojiContainer" style="display: none"></div>
+              <input
+                type="text"
+                class="comment"
+                id="emojiInput"
+                placeholder="댓글 달기..."
+              />
               <button class="comment-button" type="submit">게시</button>
             </div>
           </form>
@@ -117,10 +130,13 @@
       </div>
       <footer>
         <p class="footer-message">Ⓒ2023 LIONGRAM</p>
+        <input type="text" id="emojiInput" placeholder="이모지 선택" />
       </footer>
     </main>
     <script src="./instagram.js"></script>
     <script src="./header.js"></script>
     <script src="./animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emojimart"></script>
+    <script src="./emojiPicker.js"></script>
   </body>
 </html>

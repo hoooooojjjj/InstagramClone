@@ -275,14 +275,7 @@
   margin-right: 10px;
   margin-left: 10px;
 }
-#like_modal_xbutton {
-  position: absolute;
-  top: 5%;
-  right: 4%;
-  font-size: 25px;
-  font-weight: bold;
-  cursor: pointer;
-}
+
 .comment-wrapper {
   margin-left: 10px;
 }
