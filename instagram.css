@@ -295,3 +295,12 @@
 .iconHover:hover {
   opacity: 50%;
 }
+#my_profile_div {
+  display: flex;
+  justify-content: center;
+}
+
+#my_profile {
+  width: 60vw;
+  height: 100vh;
+}

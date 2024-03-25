@@ -20,7 +20,7 @@ blackHeart1.addEventListener("click", () => {
     }
   );
 
-  // 3초 후에 다시 -40%로 애니메이션 실행
+  // 4초 후에 다시 -40%로 애니메이션 실행
   setTimeout(() => {
     like_modal.animate(
       { right: ["1%", "-100%"] }, // 시작, 끝

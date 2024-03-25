@@ -13,19 +13,6 @@ xButton.addEventListener("click", () => {
   storyModal.style.display = "none";
 });
 
-// 실습 2
-const profile_container = document.querySelector(".profile-container");
-const profile_modal = document.getElementById("profile-modal");
-
-profile_container.addEventListener("mouseover", () => {
-  profile_modal.style.display = "block";
-  profile_modal.style.position = "absolute";
-});
-
-profile_container.addEventListener("mouseout", () => {
-  profile_modal.style.display = "none";
-});
-
 // 실습 3
 const likeCount = document.getElementById("like-count");
 let likeCountNum = likeCount.innerText;
@@ -72,7 +59,12 @@ const submitComents = (commentText, deleteComment) => {
   img.onclick = deleteComment;
   img.src = "./images/close.png";
   img.alt = "comment";
+  const img2 = document.createElement("img");
+  img2.className = "comment-delete-icon";
+  img2.src = "./images/close.png";
+  img2.alt = "comment";
   span.appendChild(img);
+  span.appendChild(img2);
   li.appendChild(span);
   ul.appendChild(li);
 };
