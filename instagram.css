@@ -250,17 +250,21 @@
 
 #like_modal {
   position: fixed;
-  width: 480px;
-  height: 120px;
+  width: 40vw;
+  height: 16vh;
   top: 1%;
   right: -100%;
   background-color: black;
   color: white;
   display: flex;
   align-items: center;
-  font-size: 18px;
-  line-height: 25px;
+
   border-radius: 20px;
+}
+#like_modal_text {
+  font-size: 1em;
+  line-height: 1em;
+  width: 30vw;
 }
 #like_modal_pofile {
   width: 50px;
@@ -278,6 +282,7 @@
 
 .comment-wrapper {
   margin-left: 10px;
+  font-size: 20px;
 }
 
 .comment-wrapper li {
@@ -303,4 +308,286 @@
 #my_profile {
   width: 60vw;
   height: 100vh;
+}
+
+/* 반응형 css */
+@media screen and (max-width: 768px) {
+  .header {
+    height: 40px;
+  }
+
+  .header .search {
+    width: 40vw;
+  }
+
+  .story-modal .xButton {
+    font-size: 30px;
+  }
+
+  #story-image {
+    width: 40vw;
+  }
+  #story_real {
+    width: 40vw;
+    padding-right: 10px;
+  }
+  #story_text {
+    height: 30px;
+    margin-left: 15px;
+    padding-left: 20px;
+    margin-right: 5px;
+  }
+
+  .story_icon {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    height: 30px;
+    padding-bottom: 5px;
+  }
+
+  .header .search {
+    width: 40vw;
+  }
+
+  .story-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-right: 20%;
+    padding-left: 20%;
+    height: 60px;
+  }
+
+  .story-container .story {
+    width: 40px;
+    height: 40px;
+  }
+
+  .story-container .story-owner {
+    margin-top: 5px;
+    font-size: 10px;
+  }
+
+  .article-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 10px auto;
+    border: 2px solid #d3d3d3;
+  }
+
+  /* profile-container 부분 시작 */
+  .profile-container {
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    height: 16px;
+  }
+
+  .profile {
+    width: 20%;
+    display: flex;
+  }
+
+  .profile-name {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .profile-image {
+    width: 20px;
+    border-radius: 5px;
+  }
+
+  .menu {
+    width: 10px;
+    height: 18px;
+  }
+  /* profile-container 부분 끝 */
+
+  /* 이미지 부분 시작*/
+  .article {
+    height: 50vh;
+  }
+  /* 이미지 부분 끝*/
+
+  /* button-container 부분 시작 */
+  .button-container {
+  }
+  .feed-buttons {
+    width: 20px;
+  }
+  #like-count-text {
+    font-size: 10px;
+  }
+  /* button-container 부분 끝 */
+
+  /* comment container 부분 시작*/
+  .comment-container {
+    padding: 5px 0px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 15px;
+  }
+  .smile {
+    width: 30px;
+    height: 27px;
+  }
+
+  .comment {
+    height: 25px;
+    width: 60%;
+    font-size: 10px;
+  }
+
+  .comment-button {
+    width: 20%;
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    color: blue;
+    opacity: 50%;
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    height: 30px;
+  }
+
+  .comment-button:hover {
+    opacity: 100%;
+  }
+  /* comment container 부분 끝*/
+
+  /* 피드 부분 끝*/
+
+  .footer-message {
+    font-size: 10px;
+  }
+
+  .story-modal {
+    display: none; /* 모달창 숨겨 놓기 */
+    position: fixed;
+    z-index: 1; /* 모달창을 제일 앞에 두기 */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 스크롤 허용 auto */
+    cursor: pointer; /* 마우스 손가락모양 */
+    background-color: #1a1a1a; /* 0.8은 투명도*/
+  }
+  .story-modal .xButton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+  .logo_black {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 30px;
+  }
+  #story-image {
+    width: 50vw;
+  }
+  #story_real {
+    position: fixed;
+    top: 95%;
+    left: 32%;
+    transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+  }
+  #story_text {
+    z-index: 2;
+    width: 110px;
+    height: 20px;
+    border-radius: 20px;
+    margin-left: 30px;
+    padding-left: 20px;
+    margin-right: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .story_icon {
+    width: 25px;
+    height: 20px;
+  }
+  .story_icon:hover {
+    opacity: 50%;
+  }
+
+  #like_modal {
+    position: fixed;
+    width: 50vw;
+    height: 10vh;
+    top: 1%;
+    right: -100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    border-radius: 20px;
+  }
+  #like_modal_text {
+    font-size: 10px;
+    line-height: 10px;
+    width: 30vw;
+  }
+  #like_modal_pofile {
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #like_modal_pofile2 {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .comment-wrapper {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  .comment-wrapper li {
+    height: 20px;
+  }
+
+  .comment-delete-icon {
+    width: 8px;
+    height: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .iconHover:hover {
+    opacity: 50%;
+  }
+  #my_profile_div {
+    display: flex;
+    justify-content: center;
+  }
+
+  #my_profile {
+    width: 60vw;
+    height: 100vh;
+  }
 }

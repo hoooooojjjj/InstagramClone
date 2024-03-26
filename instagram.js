@@ -52,7 +52,6 @@ const submitComents = (commentObj) => {
   const li = document.createElement("li");
   li.innerText = commentObj.text;
   li.id = commentObj.id;
-  li.style.fontSize = "20px";
   li.style.listStyle = "none";
   const span = document.createElement("span");
   const img = document.createElement("img");
